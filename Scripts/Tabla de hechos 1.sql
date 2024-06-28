@@ -51,8 +51,8 @@ CREATE TABLE dim_promocion (
   descuento INT
 );
 
-CREATE TABLE dim_d_time (
-  idTime INT PRIMARY KEY,
+CREATE TABLE dim_time (
+  id INT PRIMARY KEY,
   date VARCHAR(50),
   dia_semana VARCHAR(50),
   semana INT,
@@ -68,16 +68,16 @@ CREATE TABLE facto1 (
   idEventos INT,
   idTime INT,
   TotalPersonas INT,
-  TotalReservas INT,
   
-  FOREIGN KEY (idTransporte) REFERENCES dim_Transporte(id),
-  FOREIGN KEY (idAtraccion) REFERENCES dim_Atracciones(id),
-  FOREIGN KEY (idPromocion) REFERENCES dim_Promocion(id),
-  FOREIGN KEY (idEventos) REFERENCES dim_Eventos(id),
-  FOREIGN KEY (idTime) REFERENCES dim_d_time(idTime)
+  FOREIGN KEY (idTransporte) REFERENCES dim_transporte(id),
+  FOREIGN KEY (idAtraccion) REFERENCES dim_atracciones(id),
+  FOREIGN KEY (idPromocion) REFERENCES dim_promocion(id),
+  FOREIGN KEY (idEventos) REFERENCES dim_eventos(id),
+  FOREIGN KEY (idTime) REFERENCES dim_time(id)
+
 );
 select * from dim_atracciones;
-select * from dim_d_time;
+select * from dim_time;
 select * from dim_departamentos;
 select * from dim_dias_festivos;
 select * from dim_eventos;

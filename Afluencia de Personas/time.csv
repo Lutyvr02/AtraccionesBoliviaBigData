@@ -1,4 +1,4 @@
-﻿idTime,date,dia_semana,semana,mes,trimestre,anio
+﻿id,date,dia_semana,semana,mes,trimestre,anio
 1,1/1/2023,Tuesday,5,1,1,2023
 2,28/2/2023,Tuesday,9,2,1,2023
 3,31/3/2023,Friday,13,3,1,2023

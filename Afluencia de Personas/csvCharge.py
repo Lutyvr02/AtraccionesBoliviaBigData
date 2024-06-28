@@ -16,11 +16,10 @@ def cargar_datos_csv(tabla, archivo_csv):
     df.to_sql(tabla, con=engine, if_exists='append', index=False)
     print(f'Datos cargados exitosamente en la tabla {tabla}')
 
-
+cargar_datos_csv('dim_time', './time.csv')
 cargar_datos_csv('dim_transporte', './transporte.csv')
 cargar_datos_csv('dim_departamentos', './departamentos.csv')
 cargar_datos_csv('dim_atracciones', './Atracciones.csv')
-cargar_datos_csv('dim_d_time', './time.csv')
 cargar_datos_csv('dim_dias_festivos', './dias_festivos.csv')
 cargar_datos_csv('dim_eventos', './eventos_bolivianos.csv')
 cargar_datos_csv('dim_promocion', './promocion.csv')
